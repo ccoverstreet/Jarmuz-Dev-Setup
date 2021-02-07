@@ -159,27 +159,5 @@ export python="/usr/bin/python3.7"
 # Expand Aliases By Default
 shopt -s expand_aliases
 
-# WINE PATHS
-alias wine64="WINEPREFIX='/home/coverstreet/.wine64' wine"
-export WINEPATH="/home/coverstreet/.wine64"
-
-# Jarmuz Path
-export PATH=/home/coverstreet/bin:$PATH
-
-# Navigation Shortcut
-alias goto-sandisk="cd /mnt/sandisk_usb"
-alias goto-research="cd /mnt/sandisk_usb/Research"
-
-# Development
-alias deno="~/.deno/bin/deno"
-
 # Useful Commands
 alias du="du -h"
-
-# Applications
-alias vncviewer="nohup /home/coverstreet/Applications/VNC-Viewer* &>/dev/null &"
-
-# Research
-alias GSAS="~/Applications/GSAS/expgui/expgui"
-alias RMC="cd ~/Applications/RMC/RMCProfile_v6p7_linux_64/; ~/Applications/RMC/RMCProfile_v6p7_linux_64/RMCProfile_setup_no_term;"
-alias VESTA="nohup ~/Applications/Vesta/VESTA-x86_64/VESTA &>/dev/null &"
