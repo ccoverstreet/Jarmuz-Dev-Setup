@@ -1,10 +1,24 @@
+set nocompatible
+
 "Setting Syntax Highlighting
-syntax on
+syntax enable
+filetype plugin on
 "set termguicolors
 " SETTING MAP LEADER
 :let mapleader = " "
 
-"set termguicolors
+set path=.,,**
+set wildmenu
+
+command! MakeTags !ctags -R .
+
+" Tweaks for browsing
+let g:netrw_banner=0        " disable annoying banner
+let g:netrw_browse_split=4  " open in prior window
+let g:netrw_altv=1          " open splits to the right
+let g:netrw_liststyle=3     " tree view
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 let $BASH_ENV="~/.bashrc"
 
@@ -68,4 +82,4 @@ command DecreaseVSplitSize execute ":vertical resize -5"
 " SWITCHING TABS
 :noremap <C-k> :tabnext<cr>
 :noremap <C-j> :tabprevious<cr>
-:noremap <C-n> :tabnew<cr>
+":noremap <C-n> :tabnew<cr>
